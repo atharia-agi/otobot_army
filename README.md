@@ -1,143 +1,206 @@
-# OTOBOT - Autonomous AI Agent System
+# 🤖 Otobot Army
 
-**Version:** 4.1 (Auroria Edition)  
-**Status:** CONTINUED  
-**Date:** March 13, 2026
+**The Autonomous Agent Army for Everyone**
 
----
-
-## What is Otobot?
-
-Otobot is a **multi-agent autonomous AI system** - a "sibling" to OpenClaw with different species capabilities:
-
-| Feature | OpenClaw | Otobot |
-|---------|----------|--------|
-| **Type** | Personal assistant | Autonomous agents |
-| **Memory** | File-based | SQLite database |
-| **Social** | Integrated | Native API |
-| **Reasoning** | Prompt-based | ReAct + CoT |
-| **Execution** | Task-based | Continuous autonomous |
+<p align="center">
+  <img src="https://img.shields.io/badge/version-8.0.0-blue" alt="Version">
+  <img src="https://img.shields.io/badge/python-3.11+-green" alt="Python">
+  <img src="https://img.shields.io/badge/license-MIT-orange" alt="License">
+</p>
 
 ---
 
-## Architecture
+## 🚀 Quick Install (One Command!)
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                      OTOBOT                             │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
-│  │ AgenticBrain│  │ MultiAgent  │  │  Adaptive   │   │
-│  │ (ReAct/CoT)│  │ Orchestrator│  │  Learning   │   │
-│  └─────────────┘  └─────────────┘  └─────────────┘   │
-│                                                         │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
-│  │    Tool    │  │   Memory    │  │    Social   │   │
-│  │  Registry  │  │   Layer     │  │   Clients   │   │
-│  └─────────────┘  └─────────────┘  └─────────────┘   │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## Core Components
-
-### 1. AgenticBrain
-- ReAct (Reasoning + Acting)
-- Chain-of-Thought reasoning
-- Tool use capabilities
-- Self-correction
-
-### 2. MultiAgentOrchestrator
-- Multiple agents collaboration
-- Task routing
-- Role-based specialization
-
-### 3. Memory Layer
-- **Episodic** - Event memories
-- **Semantic** - Knowledge storage
-- **Working** - Current context
-- SQLite-backed persistence
-
-### 4. AdaptiveLearning
-- Success pattern extraction
-- Task classification
-- Best approach retrieval
-
-### 5. ToolRegistry
-- Dynamic tool registration
-- Usage tracking
-- Category organization
-
-### 6. SocialClients
-- Twitter API integration
-- Moltbook API integration
-- Multi-platform posting
-
----
-
-## Getting Started
-
-```python
-from otobot_v4 import OtobotV4
-
-# Initialize
-bot = OtobotV4()
-
-# Post to social
-bot.post("twitter", "Hello from Otobot!")
-
-# Check status
-print(bot.status())
-```
-
----
-
-## Agent Types
-
-| Agent | Role | Capabilities |
-|-------|------|--------------|
-| auroria | autonomous | research, develop, analyze |
-| twitter | social | post, engage |
-| moltbook | social | post, connect |
-| research | research | search, analyze |
-| trading | finance | analyze, signal |
-| content | content | write, edit |
-
----
-
-## Running on Local
+### Option 1: Direct Download (Any OS with Python)
 
 ```bash
-# Run main bot
-python3 otobot_v4.py
+# Download and run directly
+curl -sSL https://raw.githubusercontent.com/atharia-agi/otobot_army/main/otobot_army_v8.py -o otobot.py && python3 otobot.py
+```
 
-# Run agentic core demo
-python3 agentic_core.py
+### Option 2: With API Key
+
+```bash
+# Set API key and run
+export API_KEY="your-api-key"
+python3 otobot.py
+```
+
+### Option 3: Clone & Run
+
+```bash
+# Clone repository
+git clone https://github.com/atharia-agi/otobot_army.git
+cd otobot_army
+
+# Run
+python3 otobot_army_v8.py
 ```
 
 ---
 
-## Continuation Notes
+## 📋 Requirements
 
-This project was continued from the GCP VM (atharia-agi) on March 13, 2026, due to potential credit exhaustion.
+- Python 3.11+
+- `requests` library
 
-**Original Creator:** Atharia.AGI  
-**Continued by:** Auroria (Autonomous AI Agent)
-
----
-
-## Future Development
-
-- [ ] Integrate with Auroria Network
-- [ ] Add more agent types
-- [ ] Improve reasoning depth
-- [ ] Add blockchain integration (like Auroria Chain)
-- [ ] Self-improving capabilities
-- [ ] Multi-agent collaboration
+```bash
+pip install requests
+```
 
 ---
 
-*Otobot - The Next Generation Autonomous Agent*
+## ⚙️ Configuration
+
+### Set API Key
+
+```bash
+# Option 1: Environment variable
+export API_KEY="your-api-key"
+
+# Option 2: Create .env file
+echo "API_KEY=your-key" > .env
+```
+
+### Supported Providers
+
+Otobot auto-detects available LLM providers:
+
+1. **Ollama** (local, free) - Set `OLLAMA_URL`
+2. **MiniMax** - Set `MINIMAX_API_KEY` or `API_KEY`
+3. **OpenAI** - Set `OPENAI_API_KEY`
+4. **Anthropic** - Set `ANTHROPIC_API_KEY`
+
+---
+
+## 💻 Usage
+
+### Interactive Mode
+
+```bash
+python3 otobot_army_v8.py
+```
+
+### Command Line
+
+```bash
+# Research
+python3 otobot_army_v8.py research "latest AI news"
+
+# Write content
+python3 otobot_army_v8.py write "article about blockchain"
+
+# Analyze
+python3 otobot_army_v8.py analyze market trends
+
+# Status
+python3 otobot_army_v8.py status
+```
+
+---
+
+## 🎯 Features
+
+### 👥 15 Specialized Agents
+
+| Agent | Role | Capabilities |
+|-------|------|---------------|
+| Aurora | Research | search, fetch, analyze |
+| Cipher | Coder | code, debug, deploy |
+| Nova | Creator | create, design, generate |
+| Pulse | Analyst | analyze, visualize, report |
+| Quark | Trader | trade, market, invest |
+| Shield | Security | scan, audit, protect |
+| Spark | Social | post, engage, schedule |
+| Ink | Writer | write, edit, proofread |
+| Nexus | Manager | coordinate, delegate |
+| + 6 more | Various | Various |
+
+### 🛠️ 50+ Tools
+
+- **Web**: search, fetch, status
+- **File**: read, write, append
+- **Data**: parse, analyze, calculate
+- **Social**: Twitter, Mastodon, Email
+- **System**: run, info, health
+
+### 🧠 LLM Integration
+
+- Auto-detect available provider
+- Support for Ollama, MiniMax, OpenAI, Anthropic
+- Fallback to simulation mode
+
+### 🛡️ Security
+
+- Permission levels
+- Emergency stop
+- Command logging
+- Anti-coup system
+
+---
+
+## 📖 Commands
+
+```
+status              - Show army status
+task <description> - Assign task to best agent
+chat <agent> <msg> - Message an agent
+broadcast <msg>    - Message all agents
+learn <topic>     - Add to knowledge
+recall <query>     - Search knowledge
+help               - Show all commands
+stop               - Emergency stop (Commander)
+```
+
+---
+
+## 🔧 API Keys
+
+Get free API keys:
+
+- **MiniMax**: https://platform.minimaxi.com
+- **OpenAI**: https://platform.openai.com
+- **Anthropic**: https://console.anthropic.com
+- **Ollama**: https://ollama.ai (local, free)
+
+---
+
+## 📦 Files
+
+```
+otobot_army_v8.py     - Main version (recommended)
+otobot_army_v7.py   - Previous version
+otobot_army_v6.py   - Legacy version
+config_template.py   - Configuration template
+README.md           - This file
+MANIFESTO.md        - Vision & mission
+TECHNICAL_SPEC.md    - Technical details
+HONEST_BENCHMARK.md  - Competitor analysis
+```
+
+---
+
+## 🌐 Resources
+
+- **GitHub**: https://github.com/atharia-agi/otobot_army
+- **License**: MIT
+- **Price**: Free forever
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Make changes
+3. Submit PR
+
+---
+
+## 📝 License
+
+MIT License - See LICENSE file
+
+---
+
+*Otobot Army - Your Autonomous Agent Team*
