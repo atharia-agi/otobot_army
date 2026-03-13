@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data
+data/
+*.db
+*.sqlite
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keys/Secrets
+*.key
+*.pem
+.env
+credentials.json
+
+# Sensitive files - DO NOT COMMIT
+battle_*.py
+mcp_integration.py
+otobot_v4.py
+income_generator.py
+content_generator.py
+
